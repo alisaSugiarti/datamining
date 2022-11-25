@@ -405,14 +405,28 @@ title="Print to PDF"
 <blockquote>
 <div><p><strong>Y = aX + b</strong></p>
 </div></blockquote>
-<p>Dimana :
-Y = Variabel Response atau Variabel Akibat (Dependent)</p>
+<p>Dimana :</p>
+<p>Y = Variabel Response atau Variabel Akibat (Dependent)</p>
 <p>X = Variabel Predictor atau Variabel Faktor Penyebab (Independent)</p>
 <p>a = koefisien regresi (kemiringan); besaran Response yang ditimbulkan oleh Predictor.</p>
 <p>b = konstanta</p>
 <p>Nilai-nilai a dan b dapat dihitung dengan menggunakan Rumus dibawah ini :</p>
-<p>a =   n(Σxy) – (Σx) (Σy) / n(Σx²) – (Σx)²</p>
-<p>b =   (Σy) (Σx²) – (Σx) (Σxy) / n(Σx²) – (Σx)²</p>
+<blockquote>
+<div><p><strong>a =   n(Σxy) – (Σx) (Σy) / n(Σx²) – (Σx)²</strong></p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>b =   (Σy) (Σx²) – (Σx) (Σxy) / n(Σx²) – (Σx)²</strong></p>
+</div></blockquote>
+<p>Berikut ini adalah Langkah-langkah dalam melakukan Analisis Regresi Linear Sederhana :</p>
+<ol class="simple">
+<li><p>Tentukan Tujuan dari melakukan Analisis Regresi Linear Sederhana</p></li>
+<li><p>Identifikasikan Variabel Faktor Penyebab (Predictor) dan Variabel Akibat (Response)</p></li>
+<li><p>Lakukan Pengumpulan Data</p></li>
+<li><p>Hitung  X², Y², XY dan total dari masing-masingnya</p></li>
+<li><p>Hitung a dan b berdasarkan rumus diatas.</p></li>
+<li><p>Buatkan Model Persamaan Regresi Linear Sederhana.</p></li>
+<li><p>Lakukan Prediksi atau Peramalan terhadap Variabel Faktor Penyebab atau Variabel Akibat.</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_regression</span>
@@ -453,7 +467,7 @@ Y = Variabel Response atau Variabel Akibat (Dependent)</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-17d66548-aeba-4a86-8ccc-efbfa435ffad">
+  <div id="df-64898149-0c09-48de-bba9-596096f9a551">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -480,33 +494,33 @@ Y = Variabel Response atau Variabel Akibat (Dependent)</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>[1.9092115159936365]</td>
-      <td>85.169232</td>
+      <td>[0.06539215965455966]</td>
+      <td>7.185492</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>[0.28966530898542453]</td>
-      <td>9.060970</td>
+      <td>[0.11059208210371653]</td>
+      <td>0.590577</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>[0.14844623403722085]</td>
-      <td>18.360784</td>
+      <td>[-0.651474070764511]</td>
+      <td>-48.765657</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>[0.6944259700086127]</td>
-      <td>21.521903</td>
+      <td>[-0.9934899535707313]</td>
+      <td>-69.360571</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>[-0.4799372337604366]</td>
-      <td>-22.510395</td>
+      <td>[0.936291008439892]</td>
+      <td>53.264314</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-17d66548-aeba-4a86-8ccc-efbfa435ffad')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-64898149-0c09-48de-bba9-596096f9a551')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -557,12 +571,12 @@ Y = Variabel Response atau Variabel Akibat (Dependent)</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-17d66548-aeba-4a86-8ccc-efbfa435ffad button.colab-df-convert');
+          document.querySelector('#df-64898149-0c09-48de-bba9-596096f9a551 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-17d66548-aeba-4a86-8ccc-efbfa435ffad');
+          const element = document.querySelector('#df-64898149-0c09-48de-bba9-596096f9a551');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -597,7 +611,7 @@ Y = Variabel Response atau Variabel Akibat (Dependent)</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9664177775089298
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9619210470664807
 </pre></div>
 </div>
 </div>
@@ -609,7 +623,7 @@ Y = Variabel Response atau Variabel Akibat (Dependent)</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([44.0470106])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([57.9742967])
 </pre></div>
 </div>
 </div>
@@ -621,7 +635,7 @@ Y = Variabel Response atau Variabel Akibat (Dependent)</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7913356802696563
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.502964442435826
 </pre></div>
 </div>
 </div>
@@ -633,7 +647,7 @@ Y = Variabel Response atau Variabel Akibat (Dependent)</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([88.88535689])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([113.44562896])
 </pre></div>
 </div>
 </div>
